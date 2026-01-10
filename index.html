@@ -56,6 +56,14 @@
       .fragment.blur.visible {
         filter: none;
       }
+      :root {
+        --accent: #f37626;
+      }
+       .fragment.highlight {
+        &.current-fragment {
+          color: var(--accent);
+        }
+      }
     </style>
   </head>
   <body>
@@ -161,17 +169,38 @@
           <section data-auto-animate>
             <h2>All Contributors</h2>
             <h3>What is it?</h3>
-            <ul>
-              <li class="fragment custom blur">A specification</li>
-              <li class="fragment custom blur">A set of tools</li>
-              <li class="fragment custom blur">A GitHub bot</li>
-            </ul>
+            <div class="columns">
+              <div class="column" style="width:50%">
+                <ul>
+                  <li class="fragment custom highlight" data-fragment-index="1">A specification</li>
+                  <li class="fragment custom highlight" data-fragment-index="2">A set of tools</li>
+                  <li class="fragment custom highlight" data-fragment-index="3">A GitHub bot</li>
+                </ul>
+              </div>
+              <div class="column" style="width:50%">
+                <div class="r-stack">
+                  <img class="fragment current-visible" data-fragment-index="1" src="static/spec_mandatory.png">
+                  <img class="fragment current-visible" data-fragment-index="2" src="static/cli.png">
+                  <img class="fragment current-visible" data-fragment-index="3" src="static/bot_example.png">
+                </div>
+              </div>
             <!-- prettier-ignore -->
             <aside data-markdown class="notes">
+              - A project about recognising the different types of contributions people make to our open source projects
               - A specification
+                - Outlining a system for recognising contributors, and all types of contributions
+                - Enforcing that this is displayed prominently
+                - Linking back to a profile or site related to the contributor
+                - Display the category of contribution, with a flexible taxonomy
+                - **Does not** encourage or specify a way to indicate the *level* of contribution
+                  Encourages recognition of all contributions and discourages the exclusion of contributors due to the perceived level of contribution
               - A set of tools
+                - CLI for managing contributor record
+                - Library for building related tools
               - A GitHub bot
-              - For recognising the different types of contributions people make to our open source projects
+                - To simplify and accelerate contributor record maintenance
+                - Encourage contributors to nominate themselves
+                - All through GitHub comments
             </aside>
           </section>
           <section data-auto-animate>
