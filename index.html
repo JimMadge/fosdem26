@@ -40,14 +40,27 @@
       .reveal table th {
         text-align: center;
       }
-      /* Columns div definition */
-      div.columns {
-        display: flex;
-        gap: min(4vw, 1.5em);
-      }
-      div.column {
-        flex: auto;
-        overflow-x: auto;
+      div {
+        /* Columns div definition */
+        &.columns {
+          display: flex;
+          gap: min(4vw, 1.5em);
+        }
+        &.column {
+          flex: auto;
+          overflow-x: auto;
+        }
+        /* container definition */
+        &.container {
+          display: grid;
+          grid-template-columns: auto auto auto;
+          & div.block {
+            object-fit: cover;
+            border: 3px solid var(--accent);
+            padding: 5px;
+            text-align: center;
+          }
+        }
       }
       /* Blur fragment */
       .fragment.blur {
@@ -303,8 +316,46 @@
             <h2>First steps</h2>
             <h3>Forming an new maintainer team</h3>
             <!-- prettier-ignore -->
+            <div class="container">
+              <div class="block">
+                <img src="static/danny_crop.png" width="125">
+                <br />
+                Danny
+              </div>
+              <div class="block">
+                <img src="static/felipe.png" width="125">
+                <br />
+                Felipe
+              </div>
+              <div class="block">
+                <img src="static/jim.jpg" width="125">
+                <br />
+                Jim
+              </div>
+              <div class="block">
+                <img src="static/josh.jpg" width="125">
+                <br />
+                Josh
+              </div>
+              <div class="block">
+                <img src="static/leah.png" width="125">
+                <br />
+                Leah
+              </div>
+              <div class="block">
+                <img src="static/maximilian.jpg" width="125">
+                <br />
+                Maximilian
+              </div>
+            </div>
             <aside data-markdown class="notes">
               - Convened a loose team
+                - Danny
+                - Filipe (fi-lee-pay)
+                - Josh
+                - Leah (like Star Wars!)
+                - Maximilian
+              - And support from creator/maintainer Jake
               - Opened discussions
               - Organise synchronous calls
               - Planning for chat (Slack, Discord, …)
