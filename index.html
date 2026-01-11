@@ -35,11 +35,6 @@
       figcaption {
         font-size: medium;
       }
-      /* Align text in tables */
-      .reveal table td,
-      .reveal table th {
-        text-align: center;
-      }
       div {
         /* Columns div definition */
         &.columns {
@@ -311,15 +306,25 @@
             <aside data-markdown class="notes">
               - Small maintainer team
               - Other commitments took precedence, or simply moved on
-              - Small bus factor for
-                  - GitHub org
-                  - Domain and DNS (one person!)
-                  - Hosting (Netlify) (one person!)
             </aside>
           </section>
           <section data-auto-animate>
             <h2>What happened?</h2>
             <h3>Bus factor</h3>
+            <table style="color:white">
+              <tr>
+                <td>GitHub</td>
+                <td class="fragment custom blur">&lt; 10 (fewer active)</td>
+              </tr>
+              <tr>
+                <td>Domain and DNS</td>
+                <td class="fragment custom blur">1!</td>
+              </tr>
+              <tr>
+                <td>Hosting</td>
+                <td class="fragment custom blur">1!</td>
+              </tr>
+            </table>
             <!-- prettier-ignore -->
             <aside data-markdown class="notes">
               - Small bus factor for
