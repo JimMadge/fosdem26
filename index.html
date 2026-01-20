@@ -127,15 +127,16 @@
           </div>
           <!-- prettier-ignore -->
           <aside data-markdown class="notes">
-            - Confusing title?
+            - I thought this was a witty title, but it isn't easy to understand
             - The Raising of Lazarus was one of Jesus' miracles
                 - Resurrected his friend Lazarus, who had been dead for four days
-            - In English-speaking countries, self raising flour, is flour with a leavening agent included
+            - In English-speaking countries, self-raising flour, is flour with a leavening agent included for baking
+            - Hence, self-raising Lazarus
             - Quote from Malcom Tucker, a sinister government spin doctor in The Thick of It
             > What? Do you think I can't get it up anymore? Is that it?
             > You're looking at fucking Lazarus, sweetheart.
             > And not just plain Lazarus. I'm fucking self-raising Lazarus, right?
-            - So, I'm going out on a limb with a joke, which is really stolen from TV, and requires knowledge of gospel, bakery (in English!)
+            - So, not only is it a bad joke, it is a bad joke I stole
             - But I always loved this quote, and I was reminded of it when thinking about how open source projects can survive a death
           </aside>
         </section>
@@ -153,13 +154,14 @@
           </figure>
           <!-- prettier-ignore -->
           <aside data-markdown class="notes">
-            - This is a story about,
+            This is a story about,
+
             - open source in the small
               - community project
               - no commercial backers
             - about the struggles of small team of volunteers
             - about the natural turnover of contributors
-              When we are volunteers, it is rare for someone to stay forever
+              no one stays forever
             - Some unoriginal observations about the challenges of open source development
             - But also the joy and hope, in how open source projects can survive death
           </aside>
@@ -232,12 +234,14 @@
                 - **Does not** encourage or specify a way to indicate the *level* of contribution
                   Encourages recognition of all contributions and discourages the exclusion of contributors due to the perceived level of contribution
               - A set of tools
+                - Data is a JSON file, hard to read/write by hand
                 - CLI for managing contributor record
                 - Library for building related tools
               - A GitHub bot
+                - Probably the most used interface
                 - To simplify and accelerate contributor record maintenance
-                - Encourage contributors to nominate themselves
                 - All through GitHub comments
+                - Encourage contributors to nominate themselves
             </aside>
           </section>
           <section data-auto-animate>
@@ -330,6 +334,7 @@
               - Other commitments took precedence, or simply moved on
               - Too much burden and burn out
               - Not effectively "promoting" users to contributors
+              - **LINK**: To focus on a key problem, bus factor
             </aside>
           </section>
           <section data-auto-animate>
@@ -355,12 +360,12 @@
             </table>
             <!-- prettier-ignore -->
             <aside data-markdown class="notes">
-              - A key problem was bus factor
               - In particular related to problems with the website
               - Small bus factor for
                   - GitHub org
                   - Domain and DNS (one person!)
                   - Hosting (Netlify) (one person!)
+              - **LINK**: For resurrection, there has to be death
             </aside>
           </section>
         </section>
@@ -425,9 +430,10 @@
                 - Leah (like Star Wars!)
                 - Maximilian
               - And support from creator/maintainer Jake
-              - Opened discussions
-              - Organise synchronous calls
-              - Planning for chat (Slack, Discord, …)
+              - Working together through
+                - discussions/issues (async)
+                - synchronous calls
+              - **LINK**: decided the first thing was to approach docs
             </aside>
           </section>
           <section data-auto-animate>
@@ -448,11 +454,10 @@
             </figure>
             <!-- prettier-ignore -->
             <aside data-markdown class="notes">
-              - Why docs
-                  - Face of the project
-                  - A good way to learn more as a maintainer
-                  - It was fragile, the site had already gone down
-                  - How many users learn about the project, or interact with it (instructions for the bot, table of contribution types)
+              Why docs?
+                - Urgent and fragile, the site had already gone down
+                - A good way to learn more as a maintainer
+                - Affects the perception and ability for people to engage
             </aside>
           </section>
         </section>
@@ -472,9 +477,13 @@
             </figure>
             <!-- prettier-ignore -->
             <aside data-markdown class="notes">
-              - Docs were built using Docusaurus
-              - More than one major version behind
+              - In the docs "code" the challenges were
+                - *tech* Relying on old dependencies
+                - *content* Out of date information, lacking dev documentation
+              - Docs were built using Docusaurus, more than one major version behind
+              - There would be breaking changes anyway
               - Decided to use this as an opportunity to switch to Astro
+              - Decided to use this as an opportunity to document the site build/contribution process
             </aside>
           </section>
           <section data-auto-animate>
@@ -495,9 +504,10 @@
             </figure>
             <!-- prettier-ignore -->
             <aside data-markdown class="notes">
-              - Larger maintainer team on GH
-              - Domain transferred, now with more than one person able to adjust records
-              - Netlify team to manage hosting with multiple maintainers
+              - Wanted to build in resilience from the beginning
+                - Conversations with Jake about getting access to infrastructure
+                - Decide whether to transfer, or create new orgs/teams
+                - A number of things were personal accounts, and needed to be moved to team access
             </aside>
           </section>
         </section>
@@ -544,8 +554,6 @@
                 - Some translations have only a small % of lines.
                   The Crowdin CLI doesn't make it easy to filter based on completeness.
                   Uncertainty about whether to publish incomplete translations.
-              - However, was this bikeshedding?
-                - There have been no bug fixes or enhancements to the tools
             </aside>
           </section>
           <section data-auto-animate>
@@ -563,13 +571,18 @@
             </figure>
             <!-- prettier-ignore -->
             <aside data-markdown class="notes">
-              - bot (deps, latest version of CLI)
-              - translations (new site structure)
-              - restructure to library, which CLI and bot use
-              - new features and community wanted changes
+              - Build up contributors and community
+              - Translations!
+              - Remaining infrastructure
+                - Bot related stuff
+              - Bot maintenance (dependencies)
+              - Better share library components between bot and CLI
+              - New features and enhancements
               - Challenges
                 - Difficult to pick up a large(ish) codebase as a new contributor
                 - Team needs to do some work to get more familiar with JS
+              - The docs were important to fix
+                but have we overlooked more tricky problems?
             </aside>
           </section>
         </section>
@@ -595,20 +608,25 @@
           <!-- prettier-ignore -->
           <aside data-markdown class="notes">
             - If there is a community, a project can survive
-            - Build resilience into your team
-              - Bus factor
+            - Build resilience into your team from the ground up
+              - Transfering infrastructure is difficult
+              - Don't attach infrastructure to individuals
             - Do what you can, all contributions are valuable
              - Don't worry too much about what you can't do
              - That doesn't just mean what you are technically able to do,
-               but also what you have time and capacity for …
+               but also what you have time and capacity for
             - Embrace going slow
               - We all have other commitments
               - It is common for projects to rely on volunteers who work as software engineers _etc._
               - After a day or week of work, it isn't always appealing to continue with similar tasks in your free time
             - Work together and have a plan
+              - Community projects are about cooperation
+              - We all had opinions on priorities, choice of tools, documentation systems
+              - It was difficult, but important to have conversations and come to an agreement
             - Put maintenance above features
               - The most important thing, is the software keeps working.
               - Builds, packaging, dependencies, bug fixes
+              - We haven't added new features, but people can still use the bot and read the docs
             - But
               - Be careful about bike-shedding
               - Focus on what is really valuable
