@@ -362,9 +362,15 @@
             <aside data-markdown class="notes">
               - In particular related to problems with the website
               - Small bus factor for
-                  - GitHub org
-                  - Domain and DNS (one person!)
-                  - Hosting (Netlify) (one person!)
+                - GitHub org
+                - Domain and DNS (one person!)
+                - Hosting (Netlify) (one person!)
+              - Large parts of the project where essentially reliant on the original developer
+                - Jake Bolam
+                - Maintenance of all contributors didn't fit with their life
+                - Principal Software engineer at Instagram
+                - Whether professional or personal commitments,
+                  it doesn't matter either is valid
               - **LINK**: For resurrection, there has to be death
             </aside>
           </section>
@@ -572,15 +578,23 @@
             <!-- prettier-ignore -->
             <aside data-markdown class="notes">
               - Build up contributors and community
+                - Solidify our current time
+                - Build a route for users → contributors
               - Translations!
+                - Build translations
+                - Deploy to live site
+                - Set up redirects based on location and browser language preference
               - Remaining infrastructure
-                - Bot related stuff
+                - Bot related stuff (build, test environment)
+                - Circle CI (we are now using GH Actions)
+                - NPM for releases!
               - Bot maintenance (dependencies)
               - Better share library components between bot and CLI
               - New features and enhancements
               - Challenges
                 - Difficult to pick up a large(ish) codebase as a new contributor
                 - Team needs to do some work to get more familiar with JS
+                - Still some (undocumented) infrastructure out of our control
               - The docs were important to fix
                 but have we overlooked more tricky problems?
             </aside>
@@ -608,13 +622,16 @@
           <!-- prettier-ignore -->
           <aside data-markdown class="notes">
             - If there is a community, a project can survive
-            - Build resilience into your team from the ground up
-              - Transfering infrastructure is difficult
+            - Build resilience into your team from the ground up.
+              Document what infrastructure you have, who has access
+              - Transferring infrastructure is difficult
               - Don't attach infrastructure to individuals
+              - Perhaps most of the time/effort has gone into coordinating with people who are time-poor
+                but are the only people who can help
             - Do what you can, all contributions are valuable
-             - Don't worry too much about what you can't do
-             - That doesn't just mean what you are technically able to do,
-               but also what you have time and capacity for
+              - Don't worry too much about what you can't do
+              - That doesn't just mean what you are technically able to do,
+                but also what you have time and capacity for
             - Embrace going slow
               - We all have other commitments
               - It is common for projects to rely on volunteers who work as software engineers _etc._
