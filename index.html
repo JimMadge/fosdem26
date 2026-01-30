@@ -88,6 +88,10 @@
             All Contributors <br />and how<br />Open Source<br />can<br />Rise
             Again
           </h3>
+          <!-- prettier-ignore -->
+          <aside data-markdown class="notes">
+            - I thought this was a witty title, but it isn't easy to understand
+          </aside>
         </section>
         <section>
           <div class="r-stack">
@@ -127,7 +131,6 @@
           </div>
           <!-- prettier-ignore -->
           <aside data-markdown class="notes">
-            - I thought this was a witty title, but it isn't easy to understand
             - The Raising of Lazarus was one of Jesus' miracles
                 - Resurrected his friend Lazarus, who had been dead for four days
             - In English-speaking countries, self-raising flour, is flour with a leavening agent included for baking
@@ -163,7 +166,6 @@
             - about the struggles of small team of volunteers
             - about the natural turnover of contributors
               no one stays forever
-            - Some unoriginal observations about the challenges of open source development
             - But also the joy and hope, in how open source projects can survive death
             - **HIT**: Just like self-raising flour, FOSS communities have all they need to survive a tricky time and rise again
           </aside>
@@ -239,20 +241,15 @@
             <aside data-markdown class="notes">
               - A project about recognising the different types of contributions people make to our open source projects
               - A specification
-                - Outlining a system for recognising contributors, and all types of contributions
                 - Enforcing that this is displayed prominently
-                - Linking back to a profile or site related to the contributor
                 - Display the category of contribution, with a flexible taxonomy
-                - **Does not** encourage or specify a way to indicate the *level* of contribution
-                  Encourages recognition of all contributions and discourages the exclusion of contributors due to the perceived level of contribution
+                - **Does not** encourage indicating or scrutinising the *level* of contribution
               - A set of tools
                 - Data is a JSON file, hard to read/write by hand
                 - CLI for managing contributor record
-                - Library for building related tools
               - A GitHub bot
-                - Probably the most used interface
-                - To simplify and accelerate contributor record maintenance
-                - All through GitHub comments
+                - Probably the *most used* interface
+                - Manage data through GitHub comments, bot opens PRs
                 - Encourage contributors to nominate themselves
             </aside>
           </section>
@@ -274,12 +271,12 @@
             </p>
             <!-- prettier-ignore -->
             <aside data-markdown class="notes">
-              - care deeply about acknowledgement
-              - other metrics or systems don't meet their needs
-              - commit history doesn't represent the effort contributors make
+              - Want their contributors to feel *recognised* and *valued*
+              - Lots of effort/importance to community management, promotion, funding and sustainability
               - Particularly in academic-adjacent projects,
-                Where there has been concerns about acknowledgement and effort to make more fair taxonomies
-              - Particularly in projects with a significant web output, where the generation of an HTML table is a benefit
+                where there is effort to make fairer taxonomies for contributors to papers
+              - Particularly in projects with a significant web output,
+                where the generation of an HTML table is a benefit
             </aside>
           </section>
           <section data-auto-animate>
@@ -302,8 +299,8 @@
             </figure>
             <!-- prettier-ignore -->
             <aside data-markdown class="notes">
-              - Some examples,
-                  - TTW
+              - *The Turing Way*, where I'm a community member and contributor
+              - A collaboratively created guide for open, reproducible and ethical data science
             </aside>
           </section>
         </section>
@@ -325,10 +322,11 @@
             />
             <!-- prettier-ignore -->
             <aside data-markdown class="notes">
-              - No new releases
-              - Longstanding bugs or rough edges
-              - Lack of development activity
-              - Issues with no response
+              - If you browsed the GitHub org, you would see signs of poor health
+                - No new releases
+                - Longstanding bugs and issues
+              - Overall lack of development, and lack of maintainer engagement
+              - **LINK**: But I've just said it is highly valued by users, so how can this be?
             </aside>
           </section>
           <section data-auto-animate>
@@ -342,12 +340,11 @@
             </p>
             <!-- prettier-ignore -->
             <aside data-markdown class="notes">
-              - This was a popular project, highly valued by its users
-                How does it become stagnant?
-              - Small maintainer team
-              - Other commitments took precedence, or simply moved on
-              - Too much burden and burn out
-              - Not effectively "promoting" users to contributors
+              - I think there are a few causes, which are quite common
+              - Lots of work split between just a few people
+              - Maintainers all have lives, you can't blame them for prioritising other things
+              - Over time, the project could come to be seen as a burden, rather than a joy
+              - Not successfully growing users into contributors and contributors into maintainers
               - **LINK**: To focus on a key problem, bus factor
             </aside>
           </section>
@@ -374,7 +371,6 @@
             </table>
             <!-- prettier-ignore -->
             <aside data-markdown class="notes">
-              - In particular related to problems with the website
               - Small bus factor for
                 - GitHub org
                 - Domain and DNS (one person!)
@@ -400,9 +396,12 @@
             ></iframe>
             <!-- prettier-ignore -->
             <aside data-markdown class="notes">
-              - **Trigger** Website goes down
+              - **Trigger** Website goes down,
+                not too surprising when we are relying on one person
               - Noticed by users
-              - Leah started a discussion and helped drive coordination of a new maintainer team
+              - Leah started a discussion 
+              - People shared how much they valued the project and would be upset to loose it
+              - helped drive formation of a new maintainer team, with volunteers stepping up
             </aside>
           </section>
           <section data-auto-animate>
@@ -449,11 +448,7 @@
                 - Josh (previous contributor)
                 - Leah (like Star Wars!)
                 - Maximilian (previous maintainer)
-              - And support from creators/maintainers Jake, Jeroen and Kent
-                - As far as I can tell …
-                - Jeroen (~yuh-roon) was the original maintainer/creator and made huge contributions to the CLI
-                - Kent was an early maintainer
-                - Jake was a recent maintainer and started the development of the bot
+              - And support from creators/maintainers Jeroen (yuh-roon), Kent, and Jake
               - Working together through
                 - discussions/issues (async)
                 - synchronous calls
@@ -479,9 +474,10 @@
             <!-- prettier-ignore -->
             <aside data-markdown class="notes">
               Why docs?
-                - Urgent and fragile, the site had already gone down
-                - A good way to learn more as a maintainer
-                - Affects the perception and ability for people to engage
+
+              - Urgent and fragile, the site had already gone down
+              - A good way to learn more as a maintainer
+              - Affects the perception and ability for people to engage
             </aside>
           </section>
         </section>
@@ -505,9 +501,9 @@
                 - *tech* Relying on old dependencies
                 - *content* Out of date information, lacking dev documentation
               - Docs were built using Docusaurus, more than one major version behind
-              - There would be breaking changes anyway
-              - Decided to use this as an opportunity to switch to Astro
-              - Decided to use this as an opportunity to document the site build/contribution process
+                - There would be breaking changes anyway
+              - Opportunity to switch to Astro
+              - Opportunity to document the site build/contribution process
             </aside>
           </section>
           <section data-auto-animate>
@@ -528,10 +524,12 @@
             </figure>
             <!-- prettier-ignore -->
             <aside data-markdown class="notes">
-              - Wanted to build in resilience from the beginning
-                - Conversations with Jake about getting access to infrastructure
-                - Decide whether to transfer, or create new orgs/teams
-                - A number of things were personal accounts, and needed to be moved to team access
+              Wanted to build in resilience from the beginning
+
+              - (Email) conversations with previous maintainers about getting access to infrastructure
+              - Decide whether to transfer, or create new orgs/teams
+              - A number of things were personal accounts,
+                and needed to be moved to team access
             </aside>
           </section>
         </section>
@@ -570,10 +568,11 @@
             <p class="fragment custom blur">No live <em>translations</em> 😭</p>
             <!-- prettier-ignore -->
             <aside data-markdown class="notes">
-              - Site is live
-                - Using current tools
-              - More resilient
-                - Maintainer team on Github
+              - Site is live using up-to-date dependencies
+              - Work is starting on CLI maintenance
+                - Updating deps
+                - Getting control of publishing
+              - More resilient with large maintainer team on GitHub and domain/hosting
               - We have lost translations from the site in the migration
                 - As files were moved about, and updates were made at the same time,
                   it may take some effort to revise the old translations and adapt them
@@ -597,26 +596,21 @@
             </figure>
             <!-- prettier-ignore -->
             <aside data-markdown class="notes">
-              - Build up contributors and community
-                - Solidify our current time
-                - Build a route for users → contributors
-              - Translations!
-                - Build translations
-                - Deploy to live site
-                - Set up redirects based on location and browser language preference
-              - Remaining infrastructure
-                - Bot related stuff (build, test environment)
-                - Circle CI (we are now using GH Actions)
-                - NPM for releases!
-              - Bot maintenance (dependencies)
-              - Better share library components between bot and CLI
-              - New features and enhancements
+              - Short term
+                - Get translations back on the site!
+                  Very important for accessibility (and in respect of those who contributed)
+                - CLI release
+                - Get access to remaining infrastructure, bot for example
+                - Start bot maintenance
+              - Longer term
+                - Build up contributors and community
+                  - Build a route for users → contributors
+                - Better share library components between bot and CLI
+                - New features and enhancements
               - Challenges
                 - Difficult to pick up a large(ish) codebase as a new contributor
                 - Team needs to do some work to get more familiar with JS
-                - Still some (undocumented) infrastructure out of our control
-              - The docs were important to fix
-                but have we overlooked more tricky problems?
+                - Still some infrastructure (possibly undocumented) out of our control
             </aside>
           </section>
         </section>
@@ -649,17 +643,15 @@
               - That doesn't just mean what you are technically able to do,
                 but also what you have time and capacity for
             - Embrace going slow
-              - We all have other commitments
-              - It is common for projects to rely on volunteers who work as software engineers _etc._
-              - After a day or week of work, it isn't always appealing to continue with similar tasks in your free time
+              - We all have other commitments, some things are more important
+              - After a day or week of work (possibly on software), maintenance in your free time may not seem fun
             - Work together and have a plan
               - Community projects are about cooperation
-              - We all had opinions on priorities, choice of tools, documentation systems
+              - We all had opinions on priorities, choice of tools
               - It was difficult, but important to have conversations and come to an agreement
             - Put maintenance above features
               - The most important thing, is the software keeps working.
               - Builds, packaging, dependencies, bug fixes
-              - We haven't added new features, but people can still use the bot and read the docs
             - But
               - Be careful about bike-shedding
               - Focus on what is really valuable
@@ -690,10 +682,10 @@
               - Bot start in 2019 Jake and Maximillian flurry of activity
               - Quiet but stable, various contributors, Maximillian as maintainer
             - You can see distinct periods of development, maintenance and hibernation
-            - **Closing**: The most important lesson, if there is a community, a project can survive
-              - We are not the first to bring this project back to life
+            - **Closing**: The most important lesson, if there is a community, a project can live
+              - We are not the first to bring this project back to life, we might not be the last
               - Maybe it is natural for smaller, community-focused projects to have an ebb and flow
-              - Open source means valuable projects don't have to die, they can rise again
+              - Open source means: valued projects don't have to die, they can rise again
           </aside>
         </section>
         <section>
@@ -720,6 +712,14 @@
             <p>
               <em><i>The Turing Way</i> community</em> and <em>Scriberia</em>
             </p>
+            <!-- prettier-ignore -->
+            <aside data-markdown class="notes">
+              Thanks to past creators/maintainers Jeroen, Kent and Jake
+                - As far as I can tell …
+                - Jeroen (~yuh-roon) was the original maintainer/creator and made huge contributions to the CLI
+                - Kent was an early maintainer
+                - Jake was a recent maintainer and started the development of the bot
+            </aside>
           </section>
         </section>
         <section>
